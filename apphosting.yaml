@@ -1,0 +1,19 @@
+# Settings to manage and configure a Firebase App Hosting backend.
+# https://firebase.google.com/docs/app-hosting/configure
+
+runConfig:
+  # Explicitly set lower CPU and memory to reduce cost per instance.
+  cpu: 0.5
+  memoryMiB: 512
+  
+  # Keep the default of scaling to zero to avoid paying for idle instances.
+  minInstances: 0
+  
+  # Maximum number of instances to handle traffic spikes.
+  # This value can be adjusted based on expected peak traffic.
+  maxInstances: 1
+  
+  # Default concurrency is a good starting point.
+  concurrency: 80
+  
+ingressSettings: ALLOW_ALL
